@@ -378,11 +378,14 @@ dfs_inorder(root)  # Output: 4 2 5 1 3
 
 ```
 ## Breadth First Search (BFS):BFS explores all the nodes at the current depth level before moving on to the next level. It works level by level.
+
+```
        1
      /   \
     2     3
    / \
   4   5
+```
 </br>
 - BFS Traversal (Level Order): 1 2 3 4 5
 ```python
