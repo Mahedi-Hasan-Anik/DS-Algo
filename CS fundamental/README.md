@@ -333,7 +333,89 @@ Edges (Connections): The value for each key is a list (or set) containing the ve
 - address of right child
 ![alt text](image-11.png)
 2. Binary Search Tree- is a data structure used in computer science for organizing and storing data in a sorted manner. Binary search tree follows all properties of binary tree and for every nodes, its left subtree contains values less than the node and the right subtree contains values greater than the node. 
-![alt text](image-12.png)
+![alt text](image-12.png)</br>
+
+## Depth First Search (DFS):
+- Definition: DFS explores as far as possible along one branch of the tree before backtracking and exploring other branches. It dives deep into the tree first.
+
+## Traversal Orders in DFS:
+
+1. Inorder Traversal (Left → Root → Right): Visits the left subtree, then the root, and finally the right subtree.
+2. Preorder Traversal (Root → Left → Right): Visits the root first, then the left subtree, and finally the right subtree.
+3. Postorder Traversal (Left → Right → Root): Visits the left subtree, then the right subtree, and finally the root.
+       1
+     /   \
+    2     3
+   / \
+  4   5 
+</br>
+DFS Inorder: 4 2 5 1 3
+DFS Preorder: 1 2 4 5 3
+DFS Postorder: 4 5 2 3 1
+
+```python
+## Inorder DFS
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+
+def dfs_inorder(root):
+    if root:
+        dfs_inorder(root.left)
+        print(root.value, end=" ")
+        dfs_inorder(root.right)
+
+# Example Tree
+root = Node(1)
+root.left = Node(2)
+root.right = Node(3)
+root.left.left = Node(4)
+root.left.right = Node(5)
+
+dfs_inorder(root)  # Output: 4 2 5 1 3
+
+```
+## Breadth First Search (BFS):BFS explores all the nodes at the current depth level before moving on to the next level. It works level by level.
+       1
+     /   \
+    2     3
+   / \
+  4   5
+</br>
+- BFS Traversal (Level Order): 1 2 3 4 5
+```python
+from collections import deque
+
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+
+def bfs(root):
+    if not root:
+        return
+    queue = deque([root])
+    while queue:
+        current = queue.popleft()
+        print(current.value, end=" ")
+        if current.left:
+            queue.append(current.left)
+        if current.right:
+            queue.append(current.right)
+
+# Example Tree
+root = Node(1)
+root.left = Node(2)
+root.right = Node(3)
+root.left.left = Node(4)
+root.left.right = Node(5)
+
+bfs(root)  # Output: 1 2 3 4 5
+
+```
 
 # **Complexity of Non-Linear Data Structures**
 
