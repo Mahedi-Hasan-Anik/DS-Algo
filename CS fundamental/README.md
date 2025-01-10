@@ -352,9 +352,9 @@ Edges (Connections): The value for each key is a list (or set) containing the ve
   4   5
 ```
 </br>
-DFS Inorder: 4 2 5 1 3
-DFS Preorder: 1 2 4 5 3
-DFS Postorder: 4 5 2 3 1
+DFS Inorder: 4 2 5 1 3 </br>
+DFS Preorder: 1 2 4 5 3 </br>
+DFS Postorder: 4 5 2 3 1 </br>
 
 ```python
 ## Inorder DFS
