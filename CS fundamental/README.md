@@ -343,11 +343,14 @@ Edges (Connections): The value for each key is a list (or set) containing the ve
 1. Inorder Traversal (Left → Root → Right): Visits the left subtree, then the root, and finally the right subtree.
 2. Preorder Traversal (Root → Left → Right): Visits the root first, then the left subtree, and finally the right subtree.
 3. Postorder Traversal (Left → Right → Root): Visits the left subtree, then the right subtree, and finally the root.
+
+```
        1
      /   \
     2     3
    / \
-  4   5 
+  4   5
+```
 </br>
 DFS Inorder: 4 2 5 1 3
 DFS Preorder: 1 2 4 5 3
