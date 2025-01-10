@@ -294,7 +294,7 @@ print("stack after popping an element: " + str(stack))
 ## Graph Terminologys 
 - **Adjacency**: The relationship between two nodes that are connected by an edge. Vertices 2 and 3 are not adjacent because there is no edge between them.
 ![alt text](image-4.png)
-- **Path**:Path: A sequence of edges that allows you to go from vertex A to vertex B is called a path. 0-1, 1-2 and 0-2 are paths from vertex 0 to vertex 2.
+- **Path**: A sequence of edges that allows you to go from vertex A to vertex B is called a path. 0-1, 1-2 and 0-2 are paths from vertex 0 to vertex 2.
 - **Directed Graph** : A graph in which an edge (u,v) doesn't necessarily mean that there is an edge (v, u) as well. The edges in such a graph are represented by arrows to show the direction of the edge.
 - **Undirected Graph** : A graph in which an edge (u,v) means that ther
 
