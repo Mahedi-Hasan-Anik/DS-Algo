@@ -316,10 +316,10 @@ Edges (Connections): The value for each key is a list (or set) containing the ve
 - **Tree**: A tree is a data structure that consists of nodes, where each node has a value and zero or more child nodes. The topmost node is called the root node.However, in tree data structure, there can only be one edge between two vertices.
 ![alt text](image-8.png)
 
-**Root**:The topmost node of a tree.
-**Height of a Node**:The depth of a node is the number of edges from the root to the node.
-**Depth of a Node**:The depth of a node is the number of edges from the root to the node.
-**Height of a Tree**:The height of a Tree is the height of the root node or the depth of the deepest node.
+**Root**:The topmost node of a tree. </br>
+**Height of a Node**:The depth of a node is the number of edges from the root to the node.</br>
+**Depth of a Node**:The depth of a node is the number of edges from the root to the node.</br>
+**Height of a Tree**:The height of a Tree is the height of the root node or the depth of the deepest node.</br>
 ![alt text](image-9.png)
 **Degree of a Node**:The degree of a node is the total number of branches of that node.
 **Forest**: A collection of disjoint trees is called a forest.
