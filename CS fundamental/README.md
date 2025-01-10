@@ -320,9 +320,10 @@ Edges (Connections): The value for each key is a list (or set) containing the ve
 **Height of a Node**:The height of a node is defined as the number of edges on the longest path from that node to a leaf node (a node with no children).</br>
 **Depth of a Node**:The depth of a node is the number of edges from the root to the node.</br>
 **Height of a Tree**:The height of a Tree is the height of the root node or the depth of the deepest node.</br>
+**Degree of a Node**:The degree of a node is the total number of branches of that node.</br>
+**Forest**: A collection of disjoint trees is called a forest.</br>
 ![alt text](image-9.png)
-**Degree of a Node**:The degree of a node is the total number of branches of that node.
-**Forest**: A collection of disjoint trees is called a forest.
+</br>
 ![alt text](image-10.png)
 
 **Types of Tree**
