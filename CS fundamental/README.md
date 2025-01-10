@@ -300,9 +300,9 @@ print("stack after popping an element: " + str(stack))
 
 ## Adjacency Matrix- 
 - **Adjacency Matrix**: The adjacency matrix is a 2D array representation of a graph, where each cell at position (i, j) indicates whether there is an edge between vertex i and vertex j.
-Structure
-Vertices (Nodes): Represented by the rows and columns of the matrix.
-Edges (Connections): Represented by the values in the matrix.
+Structure </br>
+Vertices (Nodes): Represented by the rows and columns of the matrix. </br>
+Edges (Connections): Represented by the values in the matrix. </br>
 ![alt text](image-5.png)
 
 ## **Adjacency List** :The adjacency list is a space-efficient way to represent a graph. In this representation, each vertex is associated with a list of all its adjacent (or connected) vertices.
