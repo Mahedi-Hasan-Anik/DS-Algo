@@ -494,8 +494,6 @@ print("\nAfter Deleting Bob:")
 hash_table.display()
 ```
 
-### Example: h(key) = key % array_size
-
 # **Complexity of Non-Linear Data Structures**
 
 ---
