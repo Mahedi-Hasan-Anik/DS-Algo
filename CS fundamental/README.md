@@ -434,11 +434,13 @@ bfs(root)  # Output: 1 2 3 4 5
 - Open Addressing: Probe the hash table to find the next available index.
 - Load Factor: The ratio of the number of elements to the table size. A high load factor increases collisions, so resizing is performed.
 </br>
+
 ## Basic Operations:
-1. Insert(key, value): Store a value associated with a key.
-2. Get(key): Retrieve the value associated with a key.
-3. Delete(key): Remove the key-value pair.
-4. Contains(key): Check if a key exists in the hash table.
+1. Insert(key, value): Store a value associated with a key. </br>
+2. Get(key): Retrieve the value associated with a key. </br>
+3. Delete(key): Remove the key-value pair. </br>
+4. Contains(key): Check if a key exists in the hash table. </br>
+
 ```python
 class HashTable:
     def __init__(self, size=10):
@@ -492,6 +494,7 @@ hash_table.delete("Bob")
 
 print("\nAfter Deleting Bob:")
 hash_table.display()
+
 ```
 
 # **Complexity of Non-Linear Data Structures**
