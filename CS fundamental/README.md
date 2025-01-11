@@ -424,6 +424,78 @@ bfs(root)  # Output: 1 2 3 4 5
 
 ```
 
+
+## Hash Data Structure 
+- A Hash data structure, or Hash Table, is a data structure that maps keys to values using a hash function. The hash function computes an index (or hash code) for a given key, and the value associated with that key is stored at that index in an array. This makes lookups, insertions, and deletions very efficient, with an average-case time complexity of O(1).
+### Key Concepts:
+- Hash Function: A function that takes a key as input and produces an index in the array.
+- Buckets: If two keys produce the same hash code (a "collision"), the hash table uses buckets (linked lists or arrays) to store multiple values at the same index.
+- Collision Resolution: Separate Chaining: Use a list at each index to store multiple key-value pairs.
+- Open Addressing: Probe the hash table to find the next available index.
+- Load Factor: The ratio of the number of elements to the table size. A high load factor increases collisions, so resizing is performed.
+</br>
+## Basic Operations:
+1. Insert(key, value): Store a value associated with a key.
+2. Get(key): Retrieve the value associated with a key.
+3. Delete(key): Remove the key-value pair.
+4. Contains(key): Check if a key exists in the hash table.
+```python
+class HashTable:
+    def __init__(self, size=10):
+        self.size = size
+        self.table = [[] for _ in range(size)]  # Create an array of empty lists (buckets)
+
+    def hash_function(self, key):
+        # Compute the hash code
+        return sum(ord(char) for char in key) % self.size
+
+    def insert(self, key, value):
+        index = self.hash_function(key)
+        # Check if the key already exists and update
+        for pair in self.table[index]:
+            if pair[0] == key:
+                pair[1] = value
+                return
+        # Otherwise, append the new key-value pair
+        self.table[index].append([key, value])
+
+    def get(self, key):
+        index = self.hash_function(key)
+        for pair in self.table[index]:
+            if pair[0] == key:
+                return pair[1]  # Return the value
+        return None  # Key not found
+
+    def delete(self, key):
+        index = self.hash_function(key)
+        for pair in self.table[index]:
+            if pair[0] == key:
+                self.table[index].remove(pair)
+                return True
+        return False  # Key not found
+
+    def display(self):
+        for i, bucket in enumerate(self.table):
+            print(f"Index {i}: {bucket}")
+
+# Example Usage
+hash_table = HashTable(size=5)
+hash_table.insert("Alice", 101)
+hash_table.insert("Bob", 102)
+hash_table.insert("Charlie", 103)
+
+print("Initial Table:")
+hash_table.display()
+
+print("\nGet Alice's Roll Number:", hash_table.get("Alice"))
+hash_table.delete("Bob")
+
+print("\nAfter Deleting Bob:")
+hash_table.display()
+```
+
+### Example: h(key) = key % array_size
+
 # **Complexity of Non-Linear Data Structures**
 
 ---
